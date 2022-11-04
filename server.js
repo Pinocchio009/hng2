@@ -16,7 +16,7 @@ app.post('/', body('x').isInt(), body('y').isInt(), (req, res)=>{
   const x = req.body.x
   const y = req.body.y
   const operator = req.body.operation_type
-  const operatorEnum = ['addition', 'substraction', 'multiplication']
+  const operatorEnum = ['addition', 'subtraction', 'multiplication']
   let result
   let index
 
