@@ -10,6 +10,18 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cors());
 
+
+app.get('/', (req, res)=> {
+  res.status(200).json({
+      slackUsername: 'Pinocchio',
+      backend: true,
+      age: 23,
+      bio: 'i am a boy trying to make it'
+  
+  })
+})
+
+
 app.post('/', body('x').isInt(), body('y').isInt(), (req, res)=>{
  
   const x = req.body.x
