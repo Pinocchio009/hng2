@@ -26,7 +26,7 @@ app.post('/', body('x').isInt(), body('y').isInt(), (req, res)=>{
   }
   if(operatorEnum.includes(operator)){
     if(operator === 'addition'){
-      index = 1
+      index = 0
       result = x + y
     }else if (operator === 'subtraction'){
       index =1
