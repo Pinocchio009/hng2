@@ -28,7 +28,7 @@ app.post('/', body('x').isInt(), body('y').isInt(), (req, res)=>{
     if(operator === 'addition'){
       index = 1
       result = x + y
-    }else if (operator === 'substraction'){
+    }else if (operator === 'subtraction'){
       index =1
       result = x-y
     }else if (operator === 'multiplication'){
