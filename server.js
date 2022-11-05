@@ -36,9 +36,17 @@ app.post('/', body('x').isInt(), body('y').isInt(), (req, res)=>{
       index = 2
     }
     return res.status(200).json({
-      slackUsername: 'Pinocchio',
-      operation_type: operatorEnum[index],
-      result
+      status: "success",
+     data: {
+        slackUsername: 'Pinocchio',
+        operation_type: operatorEnum[index],
+        result
+      }
+    })
+  }else {
+    return res.status(400).json({
+      status:"fail",
+      message:"invalid operator"
     })
   }
 })
