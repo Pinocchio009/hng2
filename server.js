@@ -37,11 +37,11 @@ app.post('/', body('x').isInt(), body('y').isInt(), (req, res)=>{
     }
     return res.status(200).json({
       status: "success",
-     data: {
+     
         slackUsername: 'Pinocchio',
         operation_type: operatorEnum[index],
         result
-      }
+      
     })
   }else {
     return res.status(400).json({
